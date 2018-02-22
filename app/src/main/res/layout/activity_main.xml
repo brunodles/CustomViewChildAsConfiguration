@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  android:padding="8dp"
+  tools:context="com.brunodles.customviewchildconfiguration.MainActivity"
+  >
+
+  <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Is this a workaround?"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    />
+
+  <!--It's here just to show the `Space` widget-->
+  <Space
+    android:layout_width="match_parent"
+    android:layout_height="20dp"
+    />
+
+  <com.brunodles.customviewchildconfiguration.MainComponent
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:mc_targetId="@+id/onMainComponent"
+    >
+
+    <com.brunodles.customviewchildconfiguration.ChildComponent
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      app:cc_targetId="@+id/onChild1"
+      />
+
+    <com.brunodles.customviewchildconfiguration.ChildComponent
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      app:cc_targetId="@+id/onChild2"
+      />
+
+    <com.brunodles.customviewchildconfiguration.ChildComponent
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      app:cc_targetId="@+id/onChild3"
+      />
+  </com.brunodles.customviewchildconfiguration.MainComponent>
+
+  <TextView
+    android:id="@+id/onMainComponent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="View as targetId on MainComponent"
+    />
+
+  <TextView
+    android:id="@+id/onChild1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="View as targetId on child"
+    />
+
+  <TextView
+    android:id="@+id/onChild2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="View as targetId on child"
+    />
+
+  <TextView
+    android:id="@+id/onChild3"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="View as targetId on child"
+    />
+
+</LinearLayout>
