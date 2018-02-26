@@ -2,7 +2,6 @@
 <layout
   xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
-  xmlns:tools="http://schemas.android.com/tools"
   >
 
   <data>
@@ -15,7 +14,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="8dp"
-    tools:context="com.brunodles.customviewchildconfiguration.MainActivity"
     >
 
     <TextView
@@ -27,17 +25,33 @@
       app:layout_constraintRight_toRightOf="parent"
       app:layout_constraintTop_toTopOf="parent"
       />
-
     <!--It's here just to show the `Space` widget-->
     <Space
       android:layout_width="match_parent"
-      android:layout_height="20dp"
+      android:layout_height="16dp"
+      />
+
+    <com.brunodles.customviewchildconfiguration.SimpleView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:checked="false"
+      android:text="is simple component visible"
+      app:sv_targetId="@+id/onSimpleComponent"
+      />
+
+    <TextView
+      android:id="@+id/onSimpleComponent"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="This is using simple component"
       />
 
     <com.brunodles.customviewchildconfiguration.MainComponent
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
       app:mc_targetId="@+id/onMainComponent"
+      app:mc_targetVisibility="true"
       >
 
       <com.brunodles.customviewchildconfiguration.ChildComponent
@@ -91,6 +105,8 @@
       android:id="@+id/checkboxDatabinding"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:checked="true"
       android:text="Using Databinding"
       />
 

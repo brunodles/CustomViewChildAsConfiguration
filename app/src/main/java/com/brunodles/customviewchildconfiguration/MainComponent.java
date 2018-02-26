@@ -1,5 +1,6 @@
 package com.brunodles.customviewchildconfiguration;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -40,7 +41,7 @@ public class MainComponent extends FrameLayout implements CompoundButton.OnCheck
         initAttrs(context, attrs);
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+    @SuppressLint("ResourceType") @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public MainComponent(Context context, @Nullable AttributeSet attrs, int defStyleAttr,
             int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);

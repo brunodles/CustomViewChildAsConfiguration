@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+  <declare-styleable name="SimpleView">
+    <attr name="sv_targetId" format="reference"/>
+  </declare-styleable>
+
   <declare-styleable name="MainComponent">
     <attr name="mc_targetId" format="reference"/>
     <attr name="mc_targetVisibility" format="boolean"/>
