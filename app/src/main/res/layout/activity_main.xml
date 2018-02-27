@@ -25,16 +25,12 @@
       app:layout_constraintRight_toRightOf="parent"
       app:layout_constraintTop_toTopOf="parent"
       />
-    <!--It's here just to show the `Space` widget-->
-    <Space
-      android:layout_width="match_parent"
-      android:layout_height="16dp"
-      />
 
     <com.brunodles.customviewchildconfiguration.SimpleView
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:checked="false"
+      android:layout_marginTop="16dp"
+      android:checked="true"
       android:text="is simple component visible"
       app:targetId="@+id/onSimpleComponent"
       />
@@ -50,8 +46,8 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginTop="16dp"
-      app:targetId="@+id/onMainComponent"
       app:checked="true"
+      app:targetId="@+id/onMainComponent"
       >
 
       <com.brunodles.customviewchildconfiguration.ChildComponent
@@ -124,6 +120,19 @@
       android:visibility="@{checkboxDatabinding.checked ? View.VISIBLE : View.GONE}"
       />
 
+    <!--It's here just to show the `Space` widget-->
+    <Space
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="1"
+      />
+
+    <!--Just to show the menu, that is a reference pointing to a xlm file-->
+    <android.support.design.widget.BottomNavigationView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:menu="@menu/menu"
+      />
   </LinearLayout>
 
 </layout>
