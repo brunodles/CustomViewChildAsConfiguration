@@ -27,7 +27,7 @@ public class SimpleView extends AppCompatCheckBox
         super(context, attrs, defStyleAttr);
 
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.SimpleView);
-        targetId = typedArray.getResourceId(R.styleable.SimpleView_sv_targetId, -1);
+        targetId = typedArray.getResourceId(R.styleable.SimpleView_targetId, -1);
         typedArray.recycle();
 
         this.setOnCheckedChangeListener(this);

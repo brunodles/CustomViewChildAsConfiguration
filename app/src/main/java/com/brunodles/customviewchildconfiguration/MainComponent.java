@@ -55,9 +55,9 @@ public class MainComponent extends FrameLayout implements CompoundButton.OnCheck
     private void initAttrs(Context context, @Nullable AttributeSet attrs) {
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.MainComponent);
 
-        int targetId = typedArray.getResourceId(R.styleable.MainComponent_mc_targetId, 0);
+        int targetId = typedArray.getResourceId(R.styleable.MainComponent_targetId, 0);
         boolean targetVisibility = typedArray.getBoolean(
-                R.styleable.MainComponent_mc_targetVisibility, false);
+                R.styleable.MainComponent_checked, false);
 
         checkbox.setChecked(targetVisibility);
 

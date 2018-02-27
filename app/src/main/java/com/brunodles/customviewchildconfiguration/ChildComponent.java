@@ -37,7 +37,7 @@ public final class ChildComponent extends View {
     private void initAttrs(Context context, @Nullable AttributeSet attrs) {
         setVisibility(View.GONE);
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.ChildComponent);
-        targetId = typedArray.getResourceId(R.styleable.ChildComponent_cc_targetId, 0);
+        targetId = typedArray.getResourceId(R.styleable.ChildComponent_targetId, 0);
         typedArray.recycle();
     }
 

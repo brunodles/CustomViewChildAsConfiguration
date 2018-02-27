@@ -36,7 +36,7 @@
       android:layout_height="wrap_content"
       android:checked="false"
       android:text="is simple component visible"
-      app:sv_targetId="@+id/onSimpleComponent"
+      app:targetId="@+id/onSimpleComponent"
       />
 
     <TextView
@@ -50,26 +50,26 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginTop="16dp"
-      app:mc_targetId="@+id/onMainComponent"
-      app:mc_targetVisibility="true"
+      app:targetId="@+id/onMainComponent"
+      app:checked="true"
       >
 
       <com.brunodles.customviewchildconfiguration.ChildComponent
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:cc_targetId="@+id/onChild1"
+        app:targetId="@+id/onChild1"
         />
 
       <com.brunodles.customviewchildconfiguration.ChildComponent
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:cc_targetId="@+id/onChild2"
+        app:targetId="@+id/onChild2"
         />
 
       <com.brunodles.customviewchildconfiguration.ChildComponent
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:cc_targetId="@+id/onChild3"
+        app:targetId="@+id/onChild3"
         />
     </com.brunodles.customviewchildconfiguration.MainComponent>
 

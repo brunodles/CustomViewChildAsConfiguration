@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+  <attr name="targetId" format="reference"/>
+  <attr name="checked" format="boolean"/>
 
   <declare-styleable name="SimpleView">
-    <attr name="sv_targetId" format="reference"/>
+    <attr name="targetId"/>
   </declare-styleable>
 
   <declare-styleable name="MainComponent">
-    <attr name="mc_targetId" format="reference"/>
-    <attr name="mc_targetVisibility" format="boolean"/>
+    <attr name="targetId"/>
+    <attr name="checked"/>
   </declare-styleable>
 
   <declare-styleable name="ChildComponent">
-    <attr name="cc_targetId" format="reference"/>
+    <attr name="targetId"/>
   </declare-styleable>
 </resources>
